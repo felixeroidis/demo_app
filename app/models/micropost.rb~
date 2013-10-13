@@ -1,0 +1,5 @@
+class Micropost < ActiveRecord::Base
+  belongs_to:user
+  attr_accessible :content, :user_id  
+  validates :content, length: { in: 1..140 }
+end
